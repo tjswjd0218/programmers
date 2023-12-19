@@ -1,4 +1,4 @@
 function solution(order) {
-    let value = order.toString().match(/[369]/g) ?? []
-    return value.length
+    const s = new Set('369')
+    return order.toString().split('').filter(v => s.has(v)).length
 }
